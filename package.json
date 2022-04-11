@@ -1,0 +1,22 @@
+{
+  "name": "20220401-crash_card",
+  "version": "1.0.0",
+  "description": "This is a blank p5.js project template.",
+  "main": "c_capteurs.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://a2c9348a-e4ac-4776-9aaa-bff0aef58d01@api.glitch.com/git/crashcardv1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "p5": "^1.4.1",
+    "vite": "^2.9.1"
+  },
+  "devDependencies": {
+    "@types/p5": "^1.4.2"
+  }
+}
