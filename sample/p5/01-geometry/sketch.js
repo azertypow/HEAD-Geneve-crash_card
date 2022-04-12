@@ -87,124 +87,124 @@ function draw() {
 
 
 
-  // ------------------------------------------------------------------
-  // DESSINER UNE ÉLIPSE
-
-  // FOND
-  fill(
-      200,    // rouge  (0 - 255)
-      0,      // vert   (0-  255)
-      100,    // bleu   (0 - 255)
-  )
-
-  // CONTOUR
-  stroke(
-      250,    // rouge  (0 - 255)
-      200,    // vert   (0-  255)
-      0,      // bleu   (0 - 255)
-  )
-
-  // ÉPAISSEUR DE CONTOUR
-  strokeWeight(10)
-
-  // ELLEMENT
-  ellipse(
-      680, // position x | par rapport au centre
-      120, // position y | par rapport au centre
-      400, // width
-      200, // height
-  )
-  // -> fin DESSINER UNE ÉLIPSE
-  // ------------------------------------------------------------------
-
-
-
-
-
-  // ------------------------------------------------------------------
-  // DESSINER UNE LIGNE
-
-  // FOND
-  fill(
-      200,    // rouge  (0 - 255)
-      0,      // vert   (0-  255)
-      100,    // bleu   (0 - 255)
-  )
-
-  // CONTOUR
-  stroke(
-      250,    // rouge  (0 - 255)
-      200,    // vert   (0-  255)
-      0,      // bleu   (0 - 255)
-  )
-
-  // ÉPAISSEUR DE CONTOUR
-  strokeWeight(10)
-
-  // TERMINAISON
-  // strokeCap(ROUND)
-  strokeCap(SQUARE)
-  // strokeCap(PROJECT)
-
-  // ELLEMENT
-  line(
-      20, //x1
-      240, //y1
-      905 - 20, //x2
-      480,  //y2
-  )
-  // -> fin DESSINER UNE LIGNE
-  // ------------------------------------------------------------------
-
-
-
-
-
-  // ------------------------------------------------------------------
-  // DESSINER UN TRIANGLE
-
-  // FOND
-  noFill()
-
-  // CONTOUR
-  stroke(
-      0,    // rouge  (0 - 255)
-      180,  // vert   (0-  255)
-      180,  // bleu   (0 - 255)
-  )
-
-  // ÉPAISSEUR DE CONTOUR
-  strokeWeight(10)
-
-  // ELLEMENT
-  triangle(
-      452,  // x1
-      200,  // y1
-      0,    // x2
-      1280, // y2
-      905,  // x3
-      1280, // y3
-  )
-
-
-  // -> fin DESSINER UN TRIANGLE
-  // ------------------------------------------------------------------
-
-
-
-
-
-  // ------------------------------------------------------------------
-  // AJOUTER UNE IMAGE
-  image(
-      image_1,
-      20,
-      500,
-      865,
-      865 / (image_1.width / image_1.height),
-  )
-  // -> fin AJOUTER UNE IMAGE
-  // ------------------------------------------------------------------
+  // // ------------------------------------------------------------------
+  // // DESSINER UNE ÉLIPSE
+  //
+  // // FOND
+  // fill(
+  //     200,    // rouge  (0 - 255)
+  //     0,      // vert   (0-  255)
+  //     100,    // bleu   (0 - 255)
+  // )
+  //
+  // // CONTOUR
+  // stroke(
+  //     250,    // rouge  (0 - 255)
+  //     200,    // vert   (0-  255)
+  //     0,      // bleu   (0 - 255)
+  // )
+  //
+  // // ÉPAISSEUR DE CONTOUR
+  // strokeWeight(10)
+  //
+  // // ELLEMENT
+  // ellipse(
+  //     680, // position x | par rapport au centre
+  //     120, // position y | par rapport au centre
+  //     400, // width
+  //     200, // height
+  // )
+  // // -> fin DESSINER UNE ÉLIPSE
+  // // ------------------------------------------------------------------
+  //
+  //
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // DESSINER UNE LIGNE
+  //
+  // // FOND
+  // fill(
+  //     200,    // rouge  (0 - 255)
+  //     0,      // vert   (0-  255)
+  //     100,    // bleu   (0 - 255)
+  // )
+  //
+  // // CONTOUR
+  // stroke(
+  //     250,    // rouge  (0 - 255)
+  //     200,    // vert   (0-  255)
+  //     0,      // bleu   (0 - 255)
+  // )
+  //
+  // // ÉPAISSEUR DE CONTOUR
+  // strokeWeight(10)
+  //
+  // // TERMINAISON
+  // // strokeCap(ROUND)
+  // strokeCap(SQUARE)
+  // // strokeCap(PROJECT)
+  //
+  // // ELLEMENT
+  // line(
+  //     20, //x1
+  //     240, //y1
+  //     905 - 20, //x2
+  //     480,  //y2
+  // )
+  // // -> fin DESSINER UNE LIGNE
+  // // ------------------------------------------------------------------
+  //
+  //
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // DESSINER UN TRIANGLE
+  //
+  // // FOND
+  // noFill()
+  //
+  // // CONTOUR
+  // stroke(
+  //     0,    // rouge  (0 - 255)
+  //     180,  // vert   (0-  255)
+  //     180,  // bleu   (0 - 255)
+  // )
+  //
+  // // ÉPAISSEUR DE CONTOUR
+  // strokeWeight(10)
+  //
+  // // ELLEMENT
+  // triangle(
+  //     452,  // x1
+  //     200,  // y1
+  //     0,    // x2
+  //     1280, // y2
+  //     905,  // x3
+  //     1280, // y3
+  // )
+  //
+  //
+  // // -> fin DESSINER UN TRIANGLE
+  // // ------------------------------------------------------------------
+  //
+  //
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // AJOUTER UNE IMAGE
+  // image(
+  //     image_1,
+  //     20,
+  //     500,
+  //     865,
+  //     865 / (image_1.width / image_1.height),
+  // )
+  // // -> fin AJOUTER UNE IMAGE
+  // // ------------------------------------------------------------------
 }
 
 function keyPressed(e) {

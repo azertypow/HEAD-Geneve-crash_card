@@ -55,9 +55,9 @@ function draw() {
       rectMode(CENTER)
       translate(x, y)
       angleMode(DEGREES)
-      // rotate(45)
+      rotate(45)
       // rotate(45 + x + y)
-      rotate(mouseX + x + y)
+      // rotate(mouseX + x + y)
 
       // style
       noFill()
