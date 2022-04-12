@@ -21,7 +21,7 @@ function setup() {
   // Ces valeurs peuvent etre modifiée
   // ------------------------------------------------------------------
   canvasHeight = 1280
-  canvasWidth = canvasHeight / 42 * 29.7 // 42 * 29.7 pour avoir le ratio d'un A3
+  canvasWidth = 905 // le ratio d'un A3
   couleurDuCanvas = color(255, 255, 255)
   image_1 = loadImage('https://cdn.glitch.global/3597cb1f-c30b-47ea-b431-59f63007a799/img.jpg?v=1648644834020')
 
@@ -46,121 +46,18 @@ function draw() {
   background(couleurDuCanvas);
 
   // ------------------------------------------------------------------
-  // début bloque exemple
-  // pour dessiner une RECTANGLE
-  // peut etre copié/collé
-
-  // 1. DEFFINIR LE STYLE
-
-  //choisir la couleur de FOND
-  // de l'élément graphique que l'on va déssiner
-  fill(
-      200,  // rouge  (0 - 255)
-      0,    // vert   (0-  255)
-      100,     // bleu   (0 - 255)
-  )
-  // choisir l'épaisseur du contour
-  strokeWeight(10)
-  //choisir la couleur de CONTOUR
-  stroke(
-      0,    // rouge  (0 - 255)
-      180,  // vert   (0-  255)
-      180,    // bleu   (0 - 255)
-  )
-
-  // 2. DESSINNER LE OU LES ÉLÉMENTS GRAPHIQUES
-
-  // déssiner le rectangle
-  rect(
-      10,   // position x | par rapport a l'angle en haut à gauche
-      10,   // position y | par rapport a l'angle en haut à gauche
-      300,  // width
-      200,  // height
-  )
-
-  // -> fin bloque exemple pour dessiner une rectangle
-  // ------------------------------------------------------------------
-
-
-
-  // ------------------------------------------------------------------
-  // dessiner une ÉLIPSE
-
-  // 1. DEFFINIR LE STYLE
-
-  // FOND
-  fill(
-      200,    // rouge  (0 - 255)
-      0,      // vert   (0-  255)
-      100,    // bleu   (0 - 255)
-  )
-
-  // ÉPAISSEUR DE CONTOUR
-  strokeWeight(10)
-
-  // CONTOUR
-  stroke(
-      250,    // rouge  (0 - 255)
-      200,    // vert   (0-  255)
-      0,      // bleu   (0 - 255)
-  )
-
-  ellipse(
-      410, // position x | par rapport au centre
-      60, // position y | par rapport au centre
-      100, // width
-      100, // height
-  )
-
-  // -> fin bloque exemple pour dessiner une élipse
-  // ------------------------------------------------------------------
-
-
-  // AJOUTER UNE IMAGE
-  image(
-      image_1,
-      10,
-      250,
-      500 * (image_1.width / image_1.height),
-      500,
-  )
-
-  // POSER DU TEXT
-  noStroke()
-  fill(0)
-
-  textSize(100)     // taille de la typo
-  textLeading(80)   // interligne
-
-  textAlign('left')
-  text(
-      "text\na gauche",          // valeur
-      10,                     // x
-      canvasHeight / 4 * 2,    // y
-  )
-
-  textAlign('center')
-  text(
-      "text\ncentre dans\nla page",          // valeur
-      10,                     // x
-      canvasHeight / 4 * 3,    // y
-      canvasWidth,
-      canvasHeight,
-  )
-
-
-
-
-  // ------------------------------------------------------------------
   // AJOUTER LA VUE DE LA WEBCAM
   capteurs.drawCamera({
-    x:      0,
+    x:      canvasWidth / 2,
     y:      canvasHeight / 2,
     height: capteurs.cameraHeight,
     width:  capteurs.cameraWidth,
   })
   // -> fin AJOUTER LA VUE DE LA WEBCAM
   // ------------------------------------------------------------------
+
+
+
 
 
   // ------------------------------------------------------------------
@@ -178,7 +75,10 @@ function draw() {
       50,
       50,
   )
+  // -> fin COULEUR EN FONCTION DE LA WEBCAM
   // ------------------------------------------------------------------
+
+
 
   //multiplier des bouts
   // resultats.multiplier();
@@ -189,27 +89,64 @@ function draw() {
   //plein de particules
   // resultats.pleinDeParticule(10);
 
+
+
+  // ------------------------------------------------------------------
   //scrolling bug
-  resultats.bug();
+  //resultats.bug();
 
+
+
+  // ------------------------------------------------------------------
   //barbouillier avec la souris
-  // resultats.barbouiller();
+  // resultats.barbouiller()
 
+
+
+  // ------------------------------------------------------------------
   //only rgb
-  // graphiques.onlyRGB();
+  // graphiques.onlyRGB()
 
+
+
+  // ------------------------------------------------------------------
   //only GRAY
-  // graphiques.onlyNB();
+  // graphiques.onlyNB()
 
+
+
+  // ------------------------------------------------------------------
   //pixeliser   (^< ⋅⋅⋅
-  // graphiques.pixeliser();
 
+  // sans options
+  // graphiques.pixeliser()
+
+  // avec options
+  // graphiques.pixeliser({
+  //   definition: 10,
+  //   colorFilter: true,          // true | false
+  //   colorFilterThreshold: 125,  // entre 0 et 255. 125 par défaut
+  // })
+
+
+
+  // ------------------------------------------------------------------
   //flouter
-  // graphiques.flouter();
-  //
+
+  // sans options
+  // graphiques.flouter()
+
+  // avec options
+  // graphiques.flouter({
+  //   intensity: 10, // 2 par défaut
+  // })
 
 }
 
-function keyPressed() {
+function keyPressed(e) {
 
+  // enregistrer le canvas avec la touche ALT et S
+  if(e.altKey && e.code === "KeyS") {
+    saveCanvas("image_from_p5", "jpg")
+  }
 }
