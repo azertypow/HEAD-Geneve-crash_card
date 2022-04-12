@@ -20,7 +20,7 @@ function setup() {
   // ------------------------------------------------------------------
   canvasHeight = 1280
   canvasWidth = 905 // le ratio d'un A3
-  couleurDuCanvas = color(255, 255, 255)
+  couleurDuCanvas = color(0, 0, 255)
 
   // creer le canvas
   createCanvas(canvasWidth, canvasHeight, P2D)
@@ -42,7 +42,14 @@ function draw() {
 
   background(couleurDuCanvas)
 
-  // dessiner ici
+  // déssiner le rectangle
+  rect(
+      20,   // position x | par rapport a l'angle en haut à gauche
+      20,   // position y | par rapport a l'angle en haut à gauche
+      400,  // width
+      200,  // height
+  )
+  
 }
 
 function keyPressed(e) {
