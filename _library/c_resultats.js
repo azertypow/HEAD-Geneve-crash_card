@@ -24,12 +24,6 @@ class Resultats {
     this.tresorAng = 0;
   }
 
-  // ----------------------------------
-  //run
-  //----------------------------------
-  draw() {
-    //console.log(this);
-  }
   //----------------------------------
   multiplier() {
     let x = random(width);
@@ -38,10 +32,11 @@ class Resultats {
     let h = random(100);
     let decX = random(-100, 100);
     let decY = random(-100, 100);
-    if (frameCount % 10 == 0)
+    if (frameCount % 10 === 0)
       this.buffer.copy(this.parent, x, y, w, h, x + decX, y + decY, w, h);
     image(this.buffer, 0, 0);
   }
+
   //----------------------------------
   pleinDeParticule(partSize = 10) {
     rectMode(CENTER);
@@ -49,17 +44,20 @@ class Resultats {
       this.particuleTab[i].draw(partSize);
     rectMode(CORNER);
   }
+
   //----------------------------------
   brouillard(color) {
     fill(red(color), green(color), blue(color), 100);
     rect(0, 0, width, height);
   }
+
   //----------------------------------
   ecranNoir() {
     fill(0);
     rectMode(CORNER);
     rect(0, 0, width, height);
   }
+
   //----------------------------------
   bug() {
     //stroke(255,0,0)/;
@@ -86,6 +84,7 @@ class Resultats {
     if (this.iterationCounter % 30 === 0) this.bug_x += random(-30, 30)
     this.iterationCounter++
   }
+
   //----------------------------------
   barbouiller() {
     if (frameCount % 2 === 0)
@@ -102,12 +101,6 @@ class Resultats {
       );
     image(this.buffer, 0, 0);
   }
-  //----------------------------------
-  miseEnAbime() {}
-  //----------------------------------
-  vagueSonore() {}
-  //----------------------------------
-  deformation() {}
 
   //----------------------------------
   sensationDUnTresor() {
@@ -127,8 +120,6 @@ class Resultats {
     rectMode(CORNER);
     pop();
   }
-  //----------------------------------
-  pleinDeVoix() {}
 }
 
 //---------------------------------------------

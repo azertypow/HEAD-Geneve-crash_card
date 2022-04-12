@@ -3,13 +3,6 @@ class Gestes {
   //  CONSTRUCTEUR
   //----------------------------------
   constructor() {
-    console.log("hello");
-  }
-  //----------------------------------
-  //  ROUTINE DE FONCTION
-  //----------------------------------
-  run(){
-
   }
   //----------------------------------
   /** get only boolean value */

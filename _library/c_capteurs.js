@@ -120,9 +120,4 @@ class Capteurs {
   clickGaucheRelache() {
     return false;
   }
-
-  //--------------
-  positionCurseur() {
-    return false;
-  }
 }
