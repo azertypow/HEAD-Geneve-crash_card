@@ -43,7 +43,6 @@ function draw() {
   background(couleurDuCanvas)
 
   // dessiner ici
-  console.log("hello")
 }
 
 function keyPressed(e) {
