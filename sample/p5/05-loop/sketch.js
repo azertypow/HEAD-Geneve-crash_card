@@ -39,7 +39,7 @@ function setup() {
 
 // ------------------------------------------------------------------
 // Draw / Boucle infinie
-// Placer le code pour déssiner dans cette fonction
+// Placer le code pour dessiner dans cette fonction
 // ------------------------------------------------------------------
 function draw() {
 

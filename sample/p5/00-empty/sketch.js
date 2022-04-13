@@ -43,6 +43,41 @@ function draw() {
   background(couleurDuCanvas)
 
   // dessiner ici
+  
+  
+  // ------------------------------------------------------------------
+  // DESSINER UNE ÉLIPSE
+
+  // FOND
+  fill(
+      0,    // rouge  (0 - 255)
+      0,      // vert   (0-  255)
+      0,    // bleu   (0 - 255)
+  )
+
+  // CONTOUR
+  noStroke() //c'est pour ne pas avoir de contours
+  
+
+  // ELEMENT
+  ellipse(
+      800, // position x | par rapport au centre
+      300, // position y | par rapport au centre
+      600, // width
+      200, // height
+  )
+  // -> fin DESSINER UNE ÉLIPSE
+  // ------------------------------------------------------------------
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 function keyPressed(e) {
@@ -51,4 +86,3 @@ function keyPressed(e) {
   if(e.altKey && e.code === "KeyS") {
     saveCanvas("image_from_p5", "jpg")
   }
-}
