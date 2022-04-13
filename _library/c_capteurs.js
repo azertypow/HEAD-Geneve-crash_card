@@ -18,15 +18,17 @@ class Capteurs {
   drawCamera({
                x      = 0,
                y      = 0,
-               width  = 100,
-               height = 100,
+               largeur  = 100,
+               hauteur = 100,
+               modeDePositionnement = CORNER,
              }) {
+    imageMode(modeDePositionnement)
     image(
         this.#capture,
         x,
         y,
-        width,
-        height,
+        largeur,
+        hauteur,
     )
   }
 
@@ -61,8 +63,8 @@ class Capteurs {
   }
 
   webcamLuminosite() {
-    const {r, g, b, a} = this.webcamCouleur()
-    return Math.round( (r + g + b + a) / 255 )
+    const {r, g, b} = this.webcamCouleur()
+    return Math.round( (r + g + b) / 3 )
   }
 
   //-------------- return keypress value

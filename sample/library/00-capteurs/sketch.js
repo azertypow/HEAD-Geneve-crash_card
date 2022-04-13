@@ -50,8 +50,8 @@ function draw() {
   capteurs.drawCamera({
     x:      canvasWidth / 2,
     y:      canvasHeight / 2,
-    height: capteurs.cameraHeight,
-    width:  capteurs.cameraWidth,
+    hauteur: capteurs.cameraHeight,
+    largeur:  capteurs.cameraWidth,
   })
   // -> fin AJOUTER LA VUE DE LA WEBCAM
   // ------------------------------------------------------------------
