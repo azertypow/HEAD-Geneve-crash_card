@@ -46,66 +46,66 @@ function draw() {
   background(couleurDuCanvas);
 
 
-  // ------------------------------------------------------------------
-  // POSER DU TEXT aligner à gauche
-  noStroke()
-  fill(0, 0, 0)
-
-  textSize(100)     // taille de la typo
-  textLeading(80)   // interligne
-
-  textAlign('left')
-  text(
-      "texte\nà gauche",          // valeur
-      20,                     // x
-      canvasHeight / 4 * 2,    // y
-  )
-  // -> fin POSER DU TEXT aligner à gauche
-  // ------------------------------------------------------------------
-
-
-
-
-
-  // ------------------------------------------------------------------
-  // POSER DU TEXT centré
-
-  noStroke()
-  fill(0, 240, 240)
-
-  textSize(100)     // taille de la typo
-  textLeading(80)   // interligne
-
-  textAlign('center')
-  text(
-      "texte\ncentré dans\nla page",  // valeur
-      10,                             // x
-      canvasHeight / 4 * 3,           // y
-      canvasWidth,                    // largeur du bloc de texte
-  )
-  // -> fin POSER DU TEXT centré
-  // ------------------------------------------------------------------
-
-
-
-
-  // ------------------------------------------------------------------
-  // POSER DU TEXT aligné à droite
-
-  noStroke()
-  fill(0, 0, 240)
-
-  textSize(100)     // taille de la typo
-  textLeading(80)   // interligne
-
-  textAlign('right')
-  text(
-      "texte\nà droite",   // valeur
-      canvasWidth - 20, // x pa rapport à la droite
-      80,               // y
-  )
-  // -> fin POSER DU TEXT aligné à droite
-  // ------------------------------------------------------------------
+  // // ------------------------------------------------------------------
+  // // POSER DU TEXT aligner à gauche
+  // noStroke()
+  // fill(0, 0, 0)
+  //
+  // textSize(100)     // taille de la typo
+  // textLeading(80)   // interligne
+  //
+  // textAlign('left')
+  // text(
+  //     "texte\nà gauche",          // valeur
+  //     20,                     // x
+  //     canvasHeight / 4 * 2,    // y
+  // )
+  // // -> fin POSER DU TEXT aligner à gauche
+  // // ------------------------------------------------------------------
+  //
+  //
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // POSER DU TEXT centré
+  //
+  // noStroke()
+  // fill(0, 240, 240)
+  //
+  // textSize(100)     // taille de la typo
+  // textLeading(80)   // interligne
+  //
+  // textAlign('center')
+  // text(
+  //     "texte\ncentré dans\nla page",  // valeur
+  //     10,                             // x
+  //     canvasHeight / 4 * 3,           // y
+  //     canvasWidth,                    // largeur du bloc de texte
+  // )
+  // // -> fin POSER DU TEXT centré
+  // // ------------------------------------------------------------------
+  //
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // POSER DU TEXT aligné à droite
+  //
+  // noStroke()
+  // fill(0, 0, 240)
+  //
+  // textSize(100)     // taille de la typo
+  // textLeading(80)   // interligne
+  //
+  // textAlign('right')
+  // text(
+  //     "texte\nà droite",   // valeur
+  //     canvasWidth - 20, // x pa rapport à la droite
+  //     80,               // y
+  // )
+  // // -> fin POSER DU TEXT aligné à droite
+  // // ------------------------------------------------------------------
 
 
 }

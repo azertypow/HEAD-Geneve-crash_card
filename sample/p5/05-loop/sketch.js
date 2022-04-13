@@ -12,7 +12,7 @@ let canvasHeight
 let canvasWidth
 let couleurDuCanvas
 
-let step        = 60
+let step        = 10
 let squareWidth = 30
 
 // Setup / s'exécute une seule fois
@@ -35,11 +35,19 @@ function setup() {
   gestes      = new Gestes()
   resultats   = new Resultats(this)
   graphiques  = new Graphiques(this)
+  
+  for(let index = 0; index < 100; index = index + 10) {
+    // index = 0, ça veut dire que l'index commence à 0
+    //index+= c'est pareil que index +1
+    
+    console.log(index)
+    
+  }
 }
 
 // ------------------------------------------------------------------
 // Draw / Boucle infinie
-// Placer le code pour déssiner dans cette fonction
+// Placer le code pour dessiner dans cette fonction
 // ------------------------------------------------------------------
 function draw() {
 
@@ -47,17 +55,19 @@ function draw() {
 
   // dessiner ici
 
-  for(let x = 0; x < width; x += step) {
-    for(let y = 0; y < height; y += step) {
+
+  for(let x = 0; x < width; x = x + squareWidth*2) {
+    //x+60 c'est les colonnes dans l'axe x. plus x est grand, plus les colonnes sont éloignées
+    for(let y = 0; y < height / 2; y = y + squareHeight*2) {
 
       // transformation
       push()
       rectMode(CENTER)
       translate(x, y)
       angleMode(DEGREES)
-      // rotate(45)
-      // rotate(45 + x + y)
-      rotate(mouseX + x + y)
+      rotate(45)
+      // rotate(45 + x + y)a
+      // rotate(mouseX + x + y)
 
       // style
       noFill()
@@ -67,16 +77,17 @@ function draw() {
           180,  // bleu   (0 - 255)
       )
 
+      /*
       stroke(
           0,                            // rouge  (0 - 255)
           mouseY / 1_000_000 * x * y,   // vert   (0-  255)
           180,                          // bleu   (0 - 255)
       )
-
-      strokeWeight(10)
+      */
+      strokeWeight(5)
 
       // element
-      rect(
+    rect(
           0,
           0,
           squareWidth,
@@ -95,3 +106,4 @@ function keyPressed(e) {
     saveCanvas("image_from_p5", "jpg")
   }
 }
+

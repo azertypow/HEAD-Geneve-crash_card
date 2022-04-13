@@ -45,31 +45,31 @@ function draw() {
   // dessiner ici
 
   // transformation
-  push()
-  rectMode(CENTER)
-  translate(width/2, height/2)
-  angleMode(DEGREES)
-  rotate(45)
-  // souris
-  // tourner en continu
-
-  // style
-  noFill()
-  stroke(
-      0,    // rouge  (0 - 255)
-      180,  // vert   (0-  255)
-      180,  // bleu   (0 - 255)
-  )
-  strokeWeight(10)
-
-  // element
-  rect(
-      0,
-      0,
-      200,
-      200,
-  )
-  pop()
+  // push()
+  // rectMode(CENTER)
+  // translate(width/2, height/2)
+  // angleMode(DEGREES)
+  // rotate(45)
+  // // souris
+  // // tourner en continu
+  //
+  // // style
+  // noFill()
+  // stroke(
+  //     0,    // rouge  (0 - 255)
+  //     180,  // vert   (0-  255)
+  //     180,  // bleu   (0 - 255)
+  // )
+  // strokeWeight(10)
+  //
+  // // element
+  // rect(
+  //     0,
+  //     0,
+  //     200,
+  //     200,
+  // )
+  // pop()
 }
 
 function keyPressed(e) {

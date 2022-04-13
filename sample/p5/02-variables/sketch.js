@@ -43,97 +43,97 @@ function draw() {
 
   background(couleurDuCanvas)
 
-  // style
-  noFill()
-  stroke(
-      0,    // rouge  (0 - 255)
-      180,  // vert   (0-  255)
-      180,  // bleu   (0 - 255)
-  )
-  strokeWeight(10)
-
-  // ------------------------------------------------------------------
-  // variable accessible dans p5
-  // ------------------------------------------------------------------
-
-
-
-  // ------------------------------------------------------------------
-  // taille du canvas:
-  // - width
-  // - height
-
-  rect(
-      0,
-      1280 / 2,
-      200,
-      200,
-  )
-  rect(
-      width / 2,
-      height / 2,
-      200,
-      200,
-  )
-
-  let positionX = width / 2
-  let positionY = height / 2
-
-  triangle(
-      positionX,
-      positionY,
-      positionX + 75, // x2
-      positionY + 100, // y2
-      positionX - 75, // x3
-      positionY + 100, // y3
-  )
-
-
-
-  // ------------------------------------------------------------------
-  // position de la souris
-  // mouseX
-  // mouseY
-
-  triangle(
-      mouseX,
-      mouseY,
-      mouseX + 75, // x2
-      mouseY + 100, // y2
-      mouseX - 75, // x3
-      mouseY + 100, // y3
-  )
-
-  rect(
-      0,
-      mouseY,
-      200,
-      200,
-  )
-  rect(
-      width / 2,
-      mouseY,
-      200,
-      200,
-  )
-
-
-
-  // ------------------------------------------------------------------
-  // le nombre de frame
-  // frameCount
-  rect(
-      0,
-      frameCount,
-      200,
-      200,
-  )
-  rect(
-      width / 2,
-      frameCount,
-      200,
-      200,
-  )
+  // // style
+  // noFill()
+  // stroke(
+  //     0,    // rouge  (0 - 255)
+  //     180,  // vert   (0-  255)
+  //     180,  // bleu   (0 - 255)
+  // )
+  // strokeWeight(10)
+  //
+  // // ------------------------------------------------------------------
+  // // variable accessible dans p5
+  // // ------------------------------------------------------------------
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // taille du canvas:
+  // // - width
+  // // - height
+  //
+  // rect(
+  //     0,
+  //     1280 / 2,
+  //     200,
+  //     200,
+  // )
+  // rect(
+  //     width / 2,
+  //     height / 2,
+  //     200,
+  //     200,
+  // )
+  //
+  // let positionX = width / 2
+  // let positionY = height / 2
+  //
+  // triangle(
+  //     positionX,
+  //     positionY,
+  //     positionX + 75, // x2
+  //     positionY + 100, // y2
+  //     positionX - 75, // x3
+  //     positionY + 100, // y3
+  // )
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // position de la souris
+  // // mouseX
+  // // mouseY
+  //
+  // triangle(
+  //     mouseX,
+  //     mouseY,
+  //     mouseX + 75, // x2
+  //     mouseY + 100, // y2
+  //     mouseX - 75, // x3
+  //     mouseY + 100, // y3
+  // )
+  //
+  // rect(
+  //     0,
+  //     mouseY,
+  //     200,
+  //     200,
+  // )
+  // rect(
+  //     width / 2,
+  //     mouseY,
+  //     200,
+  //     200,
+  // )
+  //
+  //
+  //
+  // // ------------------------------------------------------------------
+  // // le nombre de frame
+  // // frameCount
+  // rect(
+  //     0,
+  //     frameCount,
+  //     200,
+  //     200,
+  // )
+  // rect(
+  //     width / 2,
+  //     frameCount,
+  //     200,
+  //     200,
+  // )
 
 }
 
