@@ -13,6 +13,9 @@ let canvasHeight
 let canvasWidth
 let couleurDuCanvas
 
+let gridMargin = 10
+let grilleDivision = 2
+
 // Setup / s'exécute une seule fois
 function setup() {
   // ------------------------------------------------------------------
@@ -45,18 +48,25 @@ function draw() {
   background(couleurDuCanvas)
 
   // ----------------------------------------------------------------------
-  graphiques.dessinerAvecUneTrace((x, y) => {
 
-    // dessiner ici
-    geometrie.dessinerUneImage({
-      imgUrl: "https://cdn.glitch.global/3597cb1f-c30b-47ea-b431-59f63007a799/img.jpg?v=1648644834020",
-      x: x + 50,
-      y: y + 50,
-      largeur: 250,
-    })
-
+  capteurs.drawCamera({
+    x: 0,
+    y: 0,
+    largeur: width,
+    hauteur: height / 2,
   })
-  // ----------------------------------------------------------------------
+
+  graphiques.pixeliser({
+    definition: 20,
+    colorFilter: true,          // true | false
+    colorFilterThreshold: 150,  // entre 0 et 255. 125 par défaut
+  })
+
+  // graphiques.flouter({intensity: 5})
+
+  // graphiques.inverser()
+  // graphiques.onlyNB()
+  // graphiques.onlyRGB()
 
 }
 

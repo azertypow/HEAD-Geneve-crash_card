@@ -45,16 +45,26 @@ function draw() {
   background(couleurDuCanvas)
 
   // ----------------------------------------------------------------------
-  graphiques.dessinerAvecUneTrace((x, y) => {
+  geometrie.grille({
+    x: 0,
+    y: 0,
+    largeur: width,
+    hauteur: height,
+    colonnes: 10,
+    lignes: 10,
 
-    // dessiner ici
-    geometrie.dessinerUneImage({
-      imgUrl: "https://cdn.glitch.global/3597cb1f-c30b-47ea-b431-59f63007a799/img.jpg?v=1648644834020",
-      x: x + 50,
-      y: y + 50,
-      largeur: 250,
-    })
+    dessin: (numeroDeColonnes, numeroDeLigne, largeurDuneColonne, hauteurDuneLigne, xDansLaGrille, yDansLaGrille) => {
 
+      // dessiner ici
+      geometrie.dessinnerUnCarre({
+        x: xDansLaGrille + largeurDuneColonne / 2,
+        y: yDansLaGrille + hauteurDuneLigne / 2,
+        largeur: 10,
+        hauteur: 10,
+        modeDePositionnement: CENTER,
+      })
+
+    },
   })
   // ----------------------------------------------------------------------
 

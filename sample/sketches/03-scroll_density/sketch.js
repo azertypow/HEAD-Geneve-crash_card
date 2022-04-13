@@ -13,6 +13,9 @@ let canvasHeight
 let canvasWidth
 let couleurDuCanvas
 
+let gridMargin = 10
+let grilleDivision = 2
+
 // Setup / s'exécute une seule fois
 function setup() {
   // ------------------------------------------------------------------
@@ -42,21 +45,56 @@ function setup() {
 // ------------------------------------------------------------------
 function draw() {
 
-  background(couleurDuCanvas)
-
   // ----------------------------------------------------------------------
-  graphiques.dessinerAvecUneTrace((x, y) => {
 
-    // dessiner ici
-    geometrie.dessinerUneImage({
-      imgUrl: "https://cdn.glitch.global/3597cb1f-c30b-47ea-b431-59f63007a799/img.jpg?v=1648644834020",
-      x: x + 50,
-      y: y + 50,
-      largeur: 250,
-    })
+  geometrie.grille({
+    x: 0,
+    y: 0,
+    largeur: width - gridMargin,
+    hauteur: height - gridMargin,
+    colonnes: grilleDivision,
+    lignes:   grilleDivision,
+    dessin: (numeroDeColonnes, numeroDeLigne, largeurDuneColonne, hauteurDuneLigne, xDansLaGrille, yDansLaGrille) => {
 
+      capteurs.drawCamera({
+        x: xDansLaGrille + largeurDuneColonne / 2 + gridMargin / 2,
+        y: yDansLaGrille + hauteurDuneLigne / 2 + gridMargin / 2,
+        largeur: largeurDuneColonne - gridMargin,
+        hauteur: hauteurDuneLigne - gridMargin,
+        modeDePositionnement: CENTER,
+      })
+
+      // dessiner ici
+      geometrie.dessinnerUnCarre({
+        x: xDansLaGrille + largeurDuneColonne / 2,
+        y: yDansLaGrille + hauteurDuneLigne / 2,
+        largeur: 10,
+        hauteur: 10,
+        modeDePositionnement: CENTER,
+      })
+
+    },
   })
-  // ----------------------------------------------------------------------
+
+  if(gestes.scroller() === "ne scroll pas") {
+    // faire quelques chose si on scroll pas
+    geometrie.dessinnerUnCarre({
+      x: width / 2,
+      y: height / 2,
+      largeur: 50,
+      hauteur: 50,
+      modeDePositionnement: CENTER,
+    })
+  }
+  else if (gestes.scroller() === "scroll vers le bas") {
+    console.log("bas")
+    grilleDivision--
+    if(grilleDivision < 2) grilleDivision = 2
+  }
+  else if (gestes.scroller() === "scroll vers le haut") {
+    console.log("haut")
+    grilleDivision++
+  }
 
 }
 

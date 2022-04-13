@@ -42,21 +42,21 @@ function setup() {
 // ------------------------------------------------------------------
 function draw() {
 
-  background(couleurDuCanvas)
 
   // ----------------------------------------------------------------------
-  graphiques.dessinerAvecUneTrace((x, y) => {
-
-    // dessiner ici
-    geometrie.dessinerUneImage({
-      imgUrl: "https://cdn.glitch.global/3597cb1f-c30b-47ea-b431-59f63007a799/img.jpg?v=1648644834020",
-      x: x + 50,
-      y: y + 50,
-      largeur: 250,
-    })
-
+  geometrie.dessinnerUnCarre({
+    x: width / 2,
+    y: height / 2,
+    largeur: width / 3,
+    hauteur: width / 3,
+    modeDePositionnement: CENTER,
+    strokeWeightValue: 0,
+    fillColor: color(
+        capteurs.webcamCouleur().r,
+        capteurs.webcamCouleur().g,
+        capteurs.webcamCouleur().b,
+    ),
   })
-  // ----------------------------------------------------------------------
 
 }
 
