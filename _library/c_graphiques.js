@@ -1,4 +1,9 @@
 class Graphiques {
+
+
+  #arrayOfMousePosition = []
+
+
   //----------------------------------
   //Constructeur
   //----------------------------------
@@ -14,6 +19,16 @@ class Graphiques {
   //----------------------------------
   onlyNB(){
     filter(GRAY)
+  }
+
+  //----------------------------------
+  dessinerAvecUneTrace(draw = (x, y) => {
+
+  }) {
+    if(mouseIsPressed) this.#arrayOfMousePosition.push({x: mouseX, y: mouseY})
+    for(const position of this.#arrayOfMousePosition) {
+      draw(position.x, position.y)
+    }
   }
 
   //----------------------------------
@@ -38,10 +53,12 @@ class Graphiques {
         definition = 20,
         colorFilter = false,
         colorFilterThreshold = 125,
+        colorSelection = "vert",
       } = {
         definition: 20,
         colorFilter: false,
         colorFilterThreshold: 125,
+        colorSelection: null,
       },
   ) {
     for (let i = 0; i < width; i += definition) {

@@ -12,9 +12,6 @@ let canvasHeight
 let canvasWidth
 let couleurDuCanvas
 
-let step        = 60
-let squareWidth = 30
-
 // Setup / s'exécute une seule fois
 function setup() {
   // ------------------------------------------------------------------
@@ -23,7 +20,7 @@ function setup() {
   // ------------------------------------------------------------------
   canvasHeight = 1280
   canvasWidth = 905 // le ratio d'un A3
-  couleurDuCanvas = color(255, 255, 255)
+  couleurDuCanvas = color(0, 0, 255)
 
   // creer le canvas
   createCanvas(canvasWidth, canvasHeight, P2D)
@@ -39,53 +36,20 @@ function setup() {
 
 // ------------------------------------------------------------------
 // Draw / Boucle infinie
-// Placer le code pour dessiner dans cette fonction
+// Placer le code pour déssiner dans cette fonction
 // ------------------------------------------------------------------
 function draw() {
 
   background(couleurDuCanvas)
 
-  // dessiner ici
-
-  for(let x = 0; x < width; x += step) {
-    for(let y = 0; y < height; y += step) {
-
-      // transformation
-      push()
-      rectMode(CENTER)
-      translate(x, y)
-      angleMode(DEGREES)
-      rotate(45)
-      // rotate(45 + x + y)
-      // rotate(mouseX + x + y)
-
-      // style
-      noFill()
-      stroke(
-          0,    // rouge  (0 - 255)
-          180,  // vert   (0-  255)
-          180,  // bleu   (0 - 255)
-      )
-
-      stroke(
-          0,                            // rouge  (0 - 255)
-          mouseY / 1_000_000 * x * y,   // vert   (0-  255)
-          180,                          // bleu   (0 - 255)
-      )
-
-      strokeWeight(10)
-
-      // element
-      rect(
-          0,
-          0,
-          squareWidth,
-          squareWidth,
-      )
-      pop()
-
-    }
-  }
+  // déssiner le rectangle
+  rect(
+      20,   // position x | par rapport a l'angle en haut à gauche
+      20,   // position y | par rapport a l'angle en haut à gauche
+      400,  // width
+      200,  // height
+  )
+  
 }
 
 function keyPressed(e) {
